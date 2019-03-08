@@ -1,0 +1,13 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: comsumer
+dubbo:
+  application:
+    name: consumer
+  registry:                 #注册中心配置，用于配置连接注册中心相关信息。
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    basePackages: com.chad.service #消費者@Refence 所在 package
